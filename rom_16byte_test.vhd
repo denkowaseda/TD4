@@ -10,9 +10,9 @@ architecture behavior of rom_16byte_test is
     -- Component Declaration for the Unit Under Test (UUT)
  
     component rom_16byte
-    port ( ADDRESS : in  STD_LOGIC_VECTOR(3 downto 0);
-           ROM_DATA : out  STD_LOGIC_VECTOR(3 downto 0);
-			  OP_CODE : out  STD_LOGIC_VECTOR(3 downto 0)
+    port ( ADDRESS : in  std_logic_vector(3 downto 0);
+           ROM_DATA : out  std_logic_vector(3 downto 0);
+	   OP_CODE : out  std_logic_vector(3 downto 0)
         );
     end component;
     
