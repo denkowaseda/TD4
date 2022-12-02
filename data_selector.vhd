@@ -1,21 +1,21 @@
---ƒf[ƒ^ƒZƒŒƒNƒ^
---“ü—ÍFA,BƒŒƒWƒXƒ^AƒXƒ‰ƒCƒhƒXƒCƒbƒ`A0000 (4bit)
---o—ÍFALU(4bit)
+--ãƒ‡ãƒ¼ã‚¿ã‚»ãƒ¬ã‚¯ã‚¿
+--å…¥åŠ›ï¼šA,Bãƒ¬ã‚¸ã‚¹ã‚¿ã€ã‚¹ãƒ©ã‚¤ãƒ‰ã‚¹ã‚¤ãƒƒãƒã€0000 (4bit)
+--å‡ºåŠ›ï¼šALU(4bit)
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+ 
 entity data_selector is
-    Port ( IN_A : in  STD_LOGIC_VECTOR(3 downto 0);
-           IN_B : in  STD_LOGIC_VECTOR(3 downto 0);
-           IN_SW : in  STD_LOGIC_VECTOR(3 downto 0);
-           SEL_A : in  STD_LOGIC;
-           SEL_B : in  STD_LOGIC;
-           OUT_Y : out  STD_LOGIC_VECTOR(3 downto 0));
+    port ( IN_A : in  std_logic_vector(3 downto 0);
+           IN_B : in  std_logic_vector(3 downto 0);
+           IN_SW : in std_logic_vector(3 downto 0);
+           SEL_A : in std_logic;
+           SEL_B : in std_logic;
+           OUT_Y : out std_logic_vector(3 downto 0));
 end data_selector;
 
-architecture RTL of data_selector is
+architecture rtl of data_selector is
 
 begin
 
@@ -31,5 +31,5 @@ begin
 		end if;	
 	end process;
 
-end RTL;
+end rtl;
 
