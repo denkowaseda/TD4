@@ -2,15 +2,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
  
-ENTITY register4_tb IS
-END register4_tb;
+entity register4_test is
+end register4_test;
  
-ARCHITECTURE behavior OF register4_tb IS 
+architecture behavior of register4_test is 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT register4
-    PORT(
+    component register4
+    port(
          CLK : IN  std_logic;
          RST : IN  std_logic;
          LOAD : IN  std_logic_vector(3 downto 0);
@@ -20,7 +20,7 @@ ARCHITECTURE behavior OF register4_tb IS
          OUT_LD : OUT  std_logic_vector(3 downto 0);
          ADDRESS : OUT  std_logic_vector(3 downto 0)
         );
-    END COMPONENT;
+    end component;
     
 
    --Inputs
@@ -38,7 +38,7 @@ ARCHITECTURE behavior OF register4_tb IS
    -- Clock period definitions
    constant CLK_period : time := 10 ns;
  
-BEGIN
+begin
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: register4 PORT MAP (
@@ -61,7 +61,7 @@ BEGIN
 		wait for CLK_period/2;
    end process;
 	
-	--LOADはローアクティブ
+	--LOAD窶堙哉陳債ーﾆ但ﾆ誰ﾆ弾ﾆ達ﾆ置
 	process 
 	begin
 		IN_DATA <= "1010";
@@ -84,4 +84,4 @@ BEGIN
 		wait;		
 	end process;
 
-END;
+end;
