@@ -1,6 +1,6 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library ieee;
+use ieee.std_ligic_1164.all;
+use ieee.std_ligic_unsigned.all;
  
 entity rom_16byte_test is
 end rom_16byte_test;
