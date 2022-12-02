@@ -2,19 +2,19 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
  
-ENTITY rom_16byte_test IS
-END rom_16byte_test;
+entity rom_16byte_test is
+end rom_16byte_test;
  
-ARCHITECTURE behavior OF rom_16byte_test IS 
+architecture behavior of rom_16byte_test is 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT rom_16byte
-    PORT ( ADDRESS : in  STD_LOGIC_VECTOR(3 downto 0);
+    component rom_16byte
+    port ( ADDRESS : in  STD_LOGIC_VECTOR(3 downto 0);
            ROM_DATA : out  STD_LOGIC_VECTOR(3 downto 0);
 			  OP_CODE : out  STD_LOGIC_VECTOR(3 downto 0)
         );
-    END COMPONENT;
+    end component;
     
    --Inputs
    signal ADDRESS : std_logic_vector(3 downto 0);
@@ -23,10 +23,10 @@ ARCHITECTURE behavior OF rom_16byte_test IS
    signal ROM_DATA : std_logic_vector(3 downto 0);
 	signal OP_CODE : std_logic_vector(3 downto 0);
  
-BEGIN
+begin
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: rom_16byte PORT MAP (
+   uut: rom_16byte port map (
           ADDRESS => ADDRESS,
           ROM_DATA => ROM_DATA,
 			 OP_CODE => OP_CODE
@@ -71,4 +71,4 @@ BEGIN
 		
    end process;
 
-END;
+end;
