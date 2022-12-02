@@ -1,6 +1,6 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
  
 entity register4_test is
 end register4_test;
@@ -11,14 +11,14 @@ architecture behavior of register4_test is
  
     component register4
     port(
-         CLK : IN  std_logic;
-         RST : IN  std_logic;
-         LOAD : IN  std_logic_vector(3 downto 0);
-         IN_DATA : IN  std_logic_vector(3 downto 0);
-         OUT_A : OUT  std_logic_vector(3 downto 0);
-         OUT_B : OUT  std_logic_vector(3 downto 0);
-         OUT_LD : OUT  std_logic_vector(3 downto 0);
-         ADDRESS : OUT  std_logic_vector(3 downto 0)
+         CLK : in  std_logic;
+         RST : in  std_logic;
+         LOAD : in  std_logic_vector(3 downto 0);
+         IN_DATA : in  std_logic_vector(3 downto 0);
+         OUT_A : out  std_logic_vector(3 downto 0);
+         OUT_B : out  std_logic_vector(3 downto 0);
+         OUT_LD : out  std_logic_vector(3 downto 0);
+         ADDRESS : out std_logic_vector(3 downto 0)
         );
     end component;
     
