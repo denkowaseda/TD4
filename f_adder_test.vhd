@@ -12,11 +12,11 @@ architecture behavior of f_adder_tb is
  
     component f_adder
     port(
-         IN_Y : IN STD_LOGIC_VECTOR(1 downto 0);
-         IN_DATA : IN STD_LOGIC_VECTOR(1 downto 0);
-         CIN : IN STD_LOGIC_VECTOR(1 downto 0);
-         CRR : OUT STD_LOGIC_VECTOR(1 downto 0);
-         DATA : OUT STD_LOGIC
+         IN_Y : in std_logic_vector(1 downto 0);
+         IN_DATA : in std_logic_vector(1 downto 0);
+         CIN : in std_logic_vector(1 downto 0);
+         CRR : out std_logic_vector(1 downto 0);
+         DATA : OUT std_logic
         );
     end component;
 
