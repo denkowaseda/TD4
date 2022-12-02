@@ -1,11 +1,11 @@
---ƒŒƒWƒXƒ^A,B@LEDo—Í@ROM‚Ö‚ÌƒAƒhƒŒƒXƒpƒX
---“ü—ÍFƒŠƒZƒbƒgAƒNƒƒbƒNALOAD(ƒŒƒWƒXƒ^‘I‘ğ4bit)AIN_DATA(“ü—Íƒf[ƒ^4bit)
---o—ÍFOUT_A,B(ƒŒƒWƒXƒ^o—Í4bit)AOUT_LD(LEDo—Í4bit)AADDRESS(ROM‚Ö‚ÌƒAƒhƒŒƒX4bit)
---LOAD‚Å’l‚ğ“]‘—‚·‚éƒŒƒWƒXƒ^‚ğ‘I‘ğA‚»‚êˆÈŠO‚Í’l‚ğ•Û
+--ãƒ¬ã‚¸ã‚¹ã‚¿A,Bã€€LEDå‡ºåŠ›ã€€ROMã¸ã®ã‚¢ãƒ‰ãƒ¬ã‚¹ãƒ‘ã‚¹
+--å…¥åŠ›ï¼šãƒªã‚»ãƒƒãƒˆã€ã‚¯ãƒ­ãƒƒã‚¯ã€LOAD(ãƒ¬ã‚¸ã‚¹ã‚¿é¸æŠ4bit)ã€IN_DATA(å…¥åŠ›ãƒ‡ãƒ¼ã‚¿4bit)
+--å‡ºåŠ›ï¼šOUT_A,B(ãƒ¬ã‚¸ã‚¹ã‚¿å‡ºåŠ›4bit)ã€OUT_LD(LEDå‡ºåŠ›4bit)ã€ADDRESS(ROMã¸ã®ã‚¢ãƒ‰ãƒ¬ã‚¹4bit)
+--LOADã§å€¤ã‚’è»¢é€ã™ã‚‹ãƒ¬ã‚¸ã‚¹ã‚¿ã‚’é¸æŠã€ãã‚Œä»¥å¤–ã¯å€¤ã‚’ä¿æŒ
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
 
 entity register4 is
     Port ( CLK : in  STD_LOGIC;
@@ -18,7 +18,7 @@ entity register4 is
            ADDRESS : out  STD_LOGIC_VECTOR(3 downto 0));
 end register4;
 
-architecture RTL of register4 is
+architecture rtl of register4 is
 
 	signal reg_a, reg_b, reg_c, reg_d : STD_LOGIC_VECTOR(3 downto 0);
 
@@ -36,7 +36,7 @@ begin
 			reg_c <= (others => '0');
 			reg_d <= (others => '0');
 		elsif(rising_edge(CLK))then
-			--ƒvƒƒOƒ‰ƒ€ƒJƒEƒ“ƒ^(reg_d)‚ğ+1‚·‚é
+			--ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚«ã‚¦ãƒ³ã‚¿(reg_d)ã‚’+1ã™ã‚‹
 			reg_d <= reg_d + 1;
 			if(LOAD(0) = '0') then
 				reg_a <= IN_DATA;
@@ -50,5 +50,5 @@ begin
 		end if;
 	end process;
 
-end RTL;
+end rtl;
 
