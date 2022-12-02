@@ -8,14 +8,14 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
 entity register4 is
-    Port ( CLK : in  STD_LOGIC;
-           RST : in  STD_LOGIC;
-           LOAD : in  STD_LOGIC_VECTOR(3 downto 0);
-           IN_DATA : in  STD_LOGIC_VECTOR(3 downto 0);
-           OUT_A : out  STD_LOGIC_VECTOR(3 downto 0);
-           OUT_B : out  STD_LOGIC_VECTOR(3 downto 0);
-           OUT_LD : out  STD_LOGIC_VECTOR(3 downto 0);
-           ADDRESS : out  STD_LOGIC_VECTOR(3 downto 0));
+    Port ( CLK : in  std_logic;
+           RST : in  std_logic;
+           LOAD : in  std_logic_vector(3 downto 0);
+           IN_DATA : in  std_logic_vector(3 downto 0);
+           OUT_A : out  std_logic_vector(3 downto 0);
+           OUT_B : out  std_logic_vector(3 downto 0);
+           OUT_LD : out  std_logic_vector(3 downto 0);
+           ADDRESS : out  std_logic_vector(3 downto 0));
 end register4;
 
 architecture rtl of register4 is
