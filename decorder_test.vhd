@@ -10,10 +10,10 @@ architecture behavior of decorder_test is
     -- Component Declaration for the Unit Under Test (UUT)
  
     component decorder
-    port ( OP_CODE : in  STD_LOGIC_VECTOR(3 downto 0);
-           C_FLAG : in  STD_LOGIC;
-           LOAD : out  STD_LOGIC_VECTOR(3 downto 0);
-           SEL_AB : out  STD_LOGIC_VECTOR(1 downto 0));
+    port ( OP_CODE : in  std_logic_vector(3 downto 0);
+           C_FLAG : in  std_logic;
+           LOAD : out  std_logic_vector(3 downto 0);
+           SEL_AB : out  std_logic_vector(1 downto 0));
     end component;
     
 
