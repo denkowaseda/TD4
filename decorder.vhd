@@ -1,20 +1,20 @@
---ƒfƒR[ƒ_
---“ü—ÍFƒIƒyƒŒ[ƒVƒ‡ƒ“ƒR[ƒh(4bit)AƒLƒƒƒŠ[ƒtƒ‰ƒO(1bit)
---o—ÍFLoadM†(4bit)AƒZƒŒƒNƒ^M†(2bit)
---ROM‚ÉŠi”[‚³‚ê‚½–½—ß‚ğÀs
+--ãƒ‡ã‚³ãƒ¼ãƒ€
+--å…¥åŠ›ï¼šã‚ªãƒšãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚³ãƒ¼ãƒ‰(4bit)ã€ã‚­ãƒ£ãƒªãƒ¼ãƒ•ãƒ©ã‚°(1bit)
+--å‡ºåŠ›ï¼šLoadä¿¡å·(4bit)ã€ã‚»ãƒ¬ã‚¯ã‚¿ä¿¡å·(2bit)
+--ROMã«æ ¼ç´ã•ã‚ŒãŸå‘½ä»¤ã‚’å®Ÿè¡Œ
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
 
 entity decorder is
-    Port ( OP_CODE : in  STD_LOGIC_VECTOR(3 downto 0);
+    port ( OP_CODE : in  STD_LOGIC_VECTOR(3 downto 0);
            C_FLAG : in  STD_LOGIC;
            LOAD : out  STD_LOGIC_VECTOR(3 downto 0);
            SEL_AB : out  STD_LOGIC_VECTOR(1 downto 0));
 end decorder;
 
-architecture RTL of decorder is
+architecture rtl of decorder is
 
 	signal selecter : STD_LOGIC_VECTOR(1 downto 0);
 
@@ -65,5 +65,5 @@ begin
 		end if;
 	end process;
 
-end RTL;
+end rtl;
 
