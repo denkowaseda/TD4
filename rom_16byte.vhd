@@ -7,14 +7,14 @@ use ieee.std_ligic_1164.all;
 use ieee.std_ligic_unsigned.all;
 
 entity rom_16byte is
-    port ( ADDRESS : in  STD_LOGIC_VECTOR(3 downto 0);
-           ROM_DATA : out  STD_LOGIC_VECTOR(3 downto 0);
-			  OP_CODE : out  STD_LOGIC_VECTOR(3 downto 0));
+    port ( ADDRESS : in  std_logic_vector(3 downto 0);
+           ROM_DATA : out  std_logic_vector(3 downto 0);
+	   OP_CODE : out  std_logic_vector(3 downto 0));
 end rom_16byte;
 
 architecture rtl of rom_16byte is
 
-	signal data : STD_LOGIC_VECTOR(7 downto 0);
+	signal data : std_logic_vector(7 downto 0);
 
 begin
 
