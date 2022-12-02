@@ -2,10 +2,10 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
  
-ENTITY rom_16byte_tb IS
-END rom_16byte_tb;
+ENTITY rom_16byte_test IS
+END rom_16byte_test;
  
-ARCHITECTURE behavior OF rom_16byte_tb IS 
+ARCHITECTURE behavior OF rom_16byte_test IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
