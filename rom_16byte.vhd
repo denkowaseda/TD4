@@ -1,18 +1,18 @@
 --16byte ROM
---“ü—ÍFƒAƒhƒŒƒX(4bit)A@o—ÍFƒf[ƒ^(8bit)
---Å‘å16s‚ÌƒvƒƒOƒ‰ƒ€‚ğ‘‚«‚Ş
+--å…¥åŠ›ï¼šã‚¢ãƒ‰ãƒ¬ã‚¹(4bit)ã€ã€€å‡ºåŠ›ï¼šãƒ‡ãƒ¼ã‚¿(8bit)
+--æœ€å¤§16è¡Œã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’æ›¸ãè¾¼ã‚€
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity rom_16byte is
-    Port ( ADDRESS : in  STD_LOGIC_VECTOR(3 downto 0);
+    port ( ADDRESS : in  STD_LOGIC_VECTOR(3 downto 0);
            ROM_DATA : out  STD_LOGIC_VECTOR(3 downto 0);
 			  OP_CODE : out  STD_LOGIC_VECTOR(3 downto 0));
 end rom_16byte;
 
-architecture RTL of rom_16byte is
+architecture rtl of rom_16byte is
 
 	signal data : STD_LOGIC_VECTOR(7 downto 0);
 
@@ -24,7 +24,7 @@ begin
 	process (ADDRESS) begin
 		case ADDRESS is
 		
-			--ƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€1 LED‚¿‚©‚¿‚©
+			--ã‚µãƒ³ãƒ—ãƒ«ãƒ—ãƒ­ã‚°ãƒ©ãƒ 1 LEDã¡ã‹ã¡ã‹
 --			when "0000" => data <= "10110011";
 --			when "0001" => data <= "10110110";
 --			when "0010" => data <= "10111100";
@@ -43,7 +43,7 @@ begin
 --			when "1111" => data <= "00000000";
 --			when others => data <= "00000000";
 		
-			--ƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€2 ƒ‰[ƒƒ“ƒ^ƒCƒ}[
+			--ã‚µãƒ³ãƒ—ãƒ«ãƒ—ãƒ­ã‚°ãƒ©ãƒ 2 ãƒ©ãƒ¼ãƒ¡ãƒ³ã‚¿ã‚¤ãƒãƒ¼
 			when "0000" => data <= "10110111";
 			when "0001" => data <= "00000001";
 			when "0010" => data <= "11100001";
@@ -64,5 +64,5 @@ begin
 		end case;
 	end process;
 	
-end RTL;
+end rtl;
 
