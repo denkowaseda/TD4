@@ -1,15 +1,15 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
 
 entity key_chatter is
-    Port ( CLK : in  STD_LOGIC;
+    port ( CLK : in  STD_LOGIC;
            RST : in  STD_LOGIC;
            SW_I : in  STD_LOGIC;
            SW_O : out  STD_LOGIC);
 end key_chatter;
 
-architecture RTL of key_chatter is
+architecture rtl of key_chatter is
 	signal cnt : integer range 0 to 10000;
 	constant ct : integer := 2;
 begin
@@ -31,5 +31,5 @@ begin
 
 	SW_O <= '1' when cnt = ct else '0';
 	
-end RTL;
+end rtl;
 
