@@ -1,24 +1,24 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all
+use ieee.std_logic_unsigned.all;
  
-ENTITY f_adder_tb IS
-END f_adder_tb;
+entity f_adder_test is
+end f_adder_test;
  
-ARCHITECTURE behavior OF f_adder_tb IS 
+architecture behavior of f_adder_tb is
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT f_adder
-    PORT(
+    component f_adder
+    port(
          IN_Y : IN STD_LOGIC_VECTOR(1 downto 0);
          IN_DATA : IN STD_LOGIC_VECTOR(1 downto 0);
          CIN : IN STD_LOGIC_VECTOR(1 downto 0);
          CRR : OUT STD_LOGIC_VECTOR(1 downto 0);
          DATA : OUT STD_LOGIC
         );
-    END COMPONENT;
+    end component;
 
    --Inputs
    signal IN_Y : std_logic_vector(1 downto 0);
@@ -29,10 +29,10 @@ ARCHITECTURE behavior OF f_adder_tb IS
    signal CRR : std_logic_vector(1 downto 0);
    signal DATA : std_logic;
  
-BEGIN
+begin
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: f_adder PORT MAP (
+   uut: f_adder port map (
           IN_Y => IN_Y,
           IN_DATA => IN_DATA,
           CIN => CIN,
@@ -45,7 +45,7 @@ BEGIN
 		IN_Y <= "00";
 		IN_DATA <= "00";
 		CIN <= "00";
-      wait for 100 ns;	
+    		wait for 100 ns;	
 		IN_Y <= "01";
 		wait for 100 ns;	
 		IN_DATA <= "01";
@@ -58,4 +58,4 @@ BEGIN
       wait;
    end process;
 
-END;
+end;
