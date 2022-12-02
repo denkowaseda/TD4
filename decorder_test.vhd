@@ -1,20 +1,20 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity decorder_test is
+end decorder_test;
  
-ENTITY decorder_tb IS
-END decorder_tb;
- 
-ARCHITECTURE behavior OF decorder_tb IS 
+architecture behavior of decorder_test is 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT decorder
-    Port ( OP_CODE : in  STD_LOGIC_VECTOR(3 downto 0);
+    component decorder
+    port ( OP_CODE : in  STD_LOGIC_VECTOR(3 downto 0);
            C_FLAG : in  STD_LOGIC;
            LOAD : out  STD_LOGIC_VECTOR(3 downto 0);
            SEL_AB : out  STD_LOGIC_VECTOR(1 downto 0));
-    END COMPONENT;
+    end component;
     
 
    --Inputs
@@ -25,10 +25,10 @@ ARCHITECTURE behavior OF decorder_tb IS
    signal LOAD : std_logic_vector(3 downto 0);
    signal SEL_AB : std_logic_vector(1 downto 0);
  
-BEGIN
+begin
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: decorder PORT MAP (
+   uut: decorder port map (
           OP_CODE => OP_CODE,
           C_FLAG => C_FLAG,
           LOAD => LOAD,
@@ -54,4 +54,4 @@ BEGIN
       wait;
    end process;
 
-END;
+end;
