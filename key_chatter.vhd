@@ -3,10 +3,10 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
 entity key_chatter is
-    port ( CLK : in  STD_LOGIC;
-           RST : in  STD_LOGIC;
-           SW_I : in  STD_LOGIC;
-           SW_O : out  STD_LOGIC);
+    port ( CLK : in  std_logic;
+           RST : in  std_logic;
+           SW_I : in  std_logic;
+           SW_O : out  std_logic);
 end key_chatter;
 
 architecture rtl of key_chatter is
