@@ -1,22 +1,22 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
  
-ENTITY key_chatter_tb IS
-END key_chatter_tb;
+entity key_chatter_tb is
+end key_chatter_tb;
  
-ARCHITECTURE behavior OF key_chatter_tb IS 
+architecture behavior of key_chatter_test is
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT key_chatter
-    PORT(
-         CLK : IN  std_logic;
-         RST : IN  std_logic;
-         SW_I : IN  std_logic;
-         SW_O : OUT  std_logic
+    component key_chatter
+    port(
+         CLK : in  std_logic;
+         RST : in  std_logic;
+         SW_I : in  std_logic;
+         SW_O : out  std_logic
         );
-    END COMPONENT;
+    end component;
     
 
    --Inputs
@@ -30,10 +30,10 @@ ARCHITECTURE behavior OF key_chatter_tb IS
    -- Clock period definitions
    constant CLK_period : time := 10 ns;
  
-BEGIN
+begin
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: key_chatter PORT MAP (
+   uut: key_chatter port map (
           CLK => CLK,
           RST => RST,
           SW_I => SW_I,
@@ -61,4 +61,4 @@ BEGIN
 		SW_I <= '0';
 		wait;
 	end process;
-END;
+end;
